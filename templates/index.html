@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Prediction</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #f4f4f4; }
+        form { background: white; padding: 20px; display: inline-block; border-radius: 10px; }
+        input { margin: 10px; padding: 8px; width: 200px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Breast Cancer Prediction System</h2>
+    <form action="/predict" method="post">
+        <input type="number" step="any" name="radius" placeholder="Radius Mean" required><br>
+        <input type="number" step="any" name="texture" placeholder="Texture Mean" required><br>
+        <input type="number" step="any" name="perimeter" placeholder="Perimeter Mean" required><br>
+        <input type="number" step="any" name="area" placeholder="Area Mean" required><br>
+        <input type="number" step="any" name="smoothness" placeholder="Smoothness Mean" required><br>
+        <button type="submit">Predict Result</button>
+    </form>
+    <h3>{{ prediction_text }}</h3>
+    <p style="color: red;">Educational purposes only.</p>
+</body>
+</html>
